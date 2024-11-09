@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\",
+  "WorkspaceRootPath": "C:\\temp\\ContactsControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\users\\gabri\\source\\repos\\contactscontrol\\contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\users\\gabri\\source\\repos\\contactscontrol\\contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,24 +38,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Startup.cs",
+              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\Startup.cs",
               "RelativeDocumentMoniker": "ContactsControl\\Startup.cs",
-              "ToolTip": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Startup.cs",
+              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\Startup.cs",
               "RelativeToolTip": "ContactsControl\\Startup.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAowA0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T15:31:39.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
+              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "ContactsControl\\Views\\Contact\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
+              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
               "RelativeToolTip": "ContactsControl\\Views\\Contact\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

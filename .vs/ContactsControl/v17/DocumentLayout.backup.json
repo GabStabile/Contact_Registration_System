@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\users\\gabri\\source\\repos\\contactscontrol\\contactscontrol\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\users\\gabri\\source\\repos\\contactscontrol\\contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,33 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Startup.cs",
               "RelativeDocumentMoniker": "ContactsControl\\Startup.cs",
               "ToolTip": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Startup.cs",
               "RelativeToolTip": "ContactsControl\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T15:31:39.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ContactController.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Controllers\\ContactController.cs",
-              "RelativeDocumentMoniker": "ContactsControl\\Controllers\\ContactController.cs",
-              "ToolTip": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Controllers\\ContactController.cs",
-              "RelativeToolTip": "ContactsControl\\Controllers\\ContactController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:59:59.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "ContactsControl\\Views\\Contact\\Index.cshtml",

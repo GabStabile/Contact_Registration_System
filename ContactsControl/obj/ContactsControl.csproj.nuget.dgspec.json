@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\ContactsControl.csproj": {}
+    "C:\\temp\\ContactsControl\\ContactsControl\\ContactsControl.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\ContactsControl.csproj": {
+    "C:\\temp\\ContactsControl\\ContactsControl\\ContactsControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\ContactsControl.csproj",
+        "projectUniqueName": "C:\\temp\\ContactsControl\\ContactsControl\\ContactsControl.csproj",
         "projectName": "ContactsControl",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\ContactsControl.csproj",
+        "projectPath": "C:\\temp\\ContactsControl\\ContactsControl\\ContactsControl.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\ContactsControl\\ContactsControl\\obj\\",
+        "outputPath": "C:\\temp\\ContactsControl\\ContactsControl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
