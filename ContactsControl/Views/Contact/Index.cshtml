@@ -1,77 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Contact list";
+﻿@model List<ContactsModel>
+@{
+	<!-- Title of page -->
+	ViewData["Title"] = "Contact list";
 }
+<!-- Button 'Add new contact' -->
 <div class="d-grid gap-1 d-md-flex justify-content-md-start">
-    <a class="btn btn-primary" role="button" asp-controller="Contact" asp-action="Create">
-        Add new contact
-    </a>
+	<a class="btn btn-primary" role="button" asp-controller="Contact" asp-action="Create">
+		Add new contact
+	</a>
 </div>
 
 <div class="text-center">
-    <h2 class="display-4">Contacts list</h2>
-    
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Last</th>
-                <th scope="col">Cellphone</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Ootto@gmail.com</td>
-                <td>11 9966-9394</td>
-                <td>
-                    <div class="btn-group me-2" role="group">
-                        <a class="btn btn-primary" asp-controller="Contact" asp-action="Edit">
-                            Edit
-                        </a>
-                        <a class="btn btn-danger" asp-controller="Contact" asp-action="Delete">
-                            Delete
-                        </a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>thornton@gmail.com</td>
-                <td>11 9966-9394</td>
-                <td>
-                    
-                    <div class="btn-group me-2" role="group">
-                        <a class="btn btn-primary" asp-controller="Contact" asp-action="Edit">
-                            Edit
-                        </a>
+	<h2 class="display-4">Contacts list</h2>
+	<!-- Create table for show on contact list -->
+	<table class="table">
 
-                        <a class="btn btn-danger" asp-controller="Contact" asp-action="Delete">
-                            Delete
-                        </a>
-
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Vanerson</td>
-                <td>larry@gmail.com<</td>
-                <td>11 9966-9394</td>
-                <td>
-                    <div class="btn-group me-2" role="group">
-                        <a class="btn btn-primary" asp-controller="Contact" asp-action="Edit">
-                            Edit
-                        </a>
-                        <a class="btn btn-danger" asp-controller="Contact" asp-action="Delete">
-                            Delete
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Last</th>
+				<th scope="col">Cellphone</th>
+			</tr>
+		</thead>
+		<tbody class="table-group-divider">
+			<!-- Checks if the model (contact list) is not null and contains elements -->
+			@if (Model != null && Model.Any())
+			{
+				<!--Itera sobre cada contato na lista de contatos (Model)-->
+				foreach (ContactsModel contact in Model)
+				{
+					<tr>
+						<!--Show contact ID in first column-->
+						<th scope="row">@contact.Id</th>
+						<!--Show contact Name-->
+						<td>@contact.Name</td>
+						<!--Show contact Email-->
+						<td>@contact.Email</td>
+						<!--Show contact Phone-->
+						<td>@contact.Phone</td>
+						<td>
+							<div class="btn-group me-2" role="group">
+								<!--Button 'Edit'-->
+								<a class="btn btn-primary" asp-route-id="@contact.Id" asp-controller="Contact" asp-action="Edit">
+									Edit
+								</a>
+								<!--Button 'Delete'-->
+								<a class="btn btn-danger" asp-route-id="@contact.Id" asp-controller="Contact" asp-action="Delete">
+									Delete
+								</a>
+							</div>
+						</td>
+					</tr>
+				}
+			}
+		</tbody>
+	</table>
 </div>
 

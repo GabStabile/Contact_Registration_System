@@ -1,6 +1,7 @@
 ﻿using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace ContactsControl.Controllers
 {
@@ -15,7 +16,8 @@ namespace ContactsControl.Controllers
         // methods gets
         public IActionResult Index()
         {
-            return View();
+            List<ContactsModel> contacts = _contactRepositorie.AllSearch();
+            return View(contacts);
         }
         public IActionResult Create()
         {

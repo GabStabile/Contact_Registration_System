@@ -1,5 +1,7 @@
 ﻿using ContactsControl.DB;
 using ContactsControl.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ContactsControl.Repositorie
 {
@@ -17,6 +19,11 @@ namespace ContactsControl.Repositorie
 			b_context.Add(contact);
 			b_context.SaveChanges();
 			return contact;
+		}
+
+		public List<ContactsModel> AllSearch()
+		{
+			return b_context.DB_Contacts.ToList();
 		}
 	}
 }
