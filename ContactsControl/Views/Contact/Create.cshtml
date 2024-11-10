@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ContactsModel
+@{
     ViewData["Title"] = "Create contact";
 }
 
@@ -6,20 +7,20 @@
     <h1 class="display-4">Create contact</h1>
 </div>
 
-<form>
+<form asp-controller="Contact" asp-action="Create" method="post">
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" placeholder="Enter contact name">
+        <input type="text" asp-for=Name class="form-control" placeholder="Enter contact name">
     </div>
 
     <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="text" class="form-control" placeholder="Enter contact e-mail">
+        <input type="text" asp-for=Email class="form-control" placeholder="Enter contact e-mail">
     </div>
 
     <div class="form-group">
         <label for="cellphone">Cellphone</label>
-        <input type="text" class="form-control" placeholder="Enter contact cellphone">
+        <input type="text" asp-for=Phone class="form-control" placeholder="Enter contact cellphone">
     </div>
 
     <button type="submit" class="btn btn-primary">
