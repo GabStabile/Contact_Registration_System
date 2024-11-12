@@ -30,9 +30,16 @@ namespace ContactsControl.Controllers
             ContactsModel contact = _contactRepositorie.ListForId(id);
             return View(contact);
         }
-        public IActionResult Delete()
+        public IActionResult DeleteConfirmation(int id)
         {
-            return View();
+            ContactsModel contact = _contactRepositorie.ListForId(id);
+            return View(contact);
+        }
+        
+        public IActionResult Delete(int id)
+        {
+            _contactRepositorie.Delete(id);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -60,7 +67,6 @@ namespace ContactsControl.Controllers
             {
                 TempData["MensagemErro"] = $"An error occurred! Details: {error.Message}";
                 return RedirectToAction("Index");
-
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using ContactsControl.DB;
 using ContactsControl.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,18 +39,37 @@ namespace ContactsControl.Repositorie
 
         public ContactsModel Edit(ContactsModel contact)
         {
-            ContactsModel contactDB = this.ListForId(contact.Id);
+            ContactsModel DBContact = this.ListForId(contact.Id);
 
-            if (contactDB == null) throw new Exception("Error exception: There was an error updating while editing the data");
+            if (DBContact == null) throw new Exception("Error exception: There was an error updating while editing the data");
 
-			contactDB.Name = contact.Name;
-            contactDB.Email = contact.Email;
-            contactDB.Phone = contact.Phone;
+			DBContact.Name = contact.Name;
+			DBContact.Email = contact.Email;
+			DBContact.Phone = contact.Phone;
 
-            _context.DB_Contacts.Update(contactDB);
+            _context.DB_Contacts.Update(DBContact);
 			_context.SaveChanges();
 
-			return contactDB;
+			return DBContact;
         }
-    }
+
+		public bool Delete(int id)
+		{
+			ContactsModel DBContact = this.ListForId(id);
+
+			if (DBContact == null) throw new Exception($"Error: Contact with ID {id} not found for deletion");
+
+			try
+			{
+				// Remove o contato encontrado
+				_context.DB_Contacts.Remove(DBContact);
+				_context.SaveChanges();
+				return true; // Indica sucesso na remoção
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Error while deleting the contact: " + ex.Message);
+			}
+		}
+	}
 }

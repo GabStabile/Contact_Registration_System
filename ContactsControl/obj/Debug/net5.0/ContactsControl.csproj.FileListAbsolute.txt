@@ -788,4 +788,4 @@ C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\refint\ContactsControl.
 C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\ContactsControl.pdb
 C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\ContactsControl.genruntimeconfig.cache
 C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\ref\ContactsControl.dll
-C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\Razor\Views\Contact\Delete.cshtml.g.cs
+C:\temp\ContactsControl\ContactsControl\obj\Debug\net5.0\Razor\Views\Contact\DeleteConfirmation.cshtml.g.cs

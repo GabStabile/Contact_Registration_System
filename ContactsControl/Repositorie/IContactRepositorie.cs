@@ -6,10 +6,10 @@ namespace ContactsControl.Repositorie
 	public interface IContactRepositorie
 	{
         object TempData { get; }
-
         ContactsModel ListForId(int id);
 		List<ContactsModel> AllSearch();
 		ContactsModel ToAdd(ContactsModel contact);
 		ContactsModel Edit(ContactsModel contacts);
+		bool Delete(int id);
 	}
 }
