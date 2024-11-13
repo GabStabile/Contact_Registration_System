@@ -11,19 +11,23 @@
 
     <input type="hidden" asp-for="Id"/>
 
-    <div class="form-group">
+    <div class="form-group custom-form-group">
         <label for="name">Name</label>
         <input type="text" asp-for=Name class="form-control" placeholder="Enter contact name">
+        @Html.ValidationMessageFor(x => x.Name)
     </div>
 
     <div class="form-group">
         <label for="email">E-mail</label>
         <input type="text" asp-for=Email class="form-control" placeholder="Enter contact e-mail">
+        @Html.ValidationMessageFor(x => x.Email)
+
     </div>
 
     <div class="form-group">
         <label for="cellphone">Cellphone</label>
         <input type="text" asp-for=Phone class="form-control" placeholder="Enter contact cellphone">
+        @Html.ValidationMessageFor(x => x.Phone)
     </div>
 
     <button type="submit" class="btn btn-primary">

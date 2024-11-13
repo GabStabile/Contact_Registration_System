@@ -26,8 +26,8 @@ namespace ContactsControl.Repositorie
 			_context.SaveChanges();
 			return contact;
 		}
-
-        public ContactsModel ListForId(int id)
+        
+		public ContactsModel ListForId(int id)
         {
             return _context.DB_Contacts.FirstOrDefault(c => c.Id == id);
         }

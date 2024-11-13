@@ -2,6 +2,7 @@
 using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 
@@ -21,10 +22,12 @@ namespace ContactsControl.Controllers
             List<ContactsModel> contacts = _contactRepositorie.AllSearch();
             return View(contacts);
         }
+
         public IActionResult Create()
         {
             return View();
         }
+
         public IActionResult Edit(int id)
         {
             ContactsModel contact = _contactRepositorie.ListForId(id);
@@ -38,15 +41,44 @@ namespace ContactsControl.Controllers
         
         public IActionResult Delete(int id)
         {
-            _contactRepositorie.Delete(id);
-            return RedirectToAction("Index");
+            try
+            {
+				bool deleted = _contactRepositorie.Delete(id);
+				if (deleted)
+                {
+					TempData["SuccessMessage"] = "Contact deleted successfully";
+				}
+                else
+                {
+                    TempData["MessageError"] = "Unable to delete your contact";
+                }
+                return RedirectToAction("Index");
+			}
+            catch (Exception error)
+            {
+                TempData["MessageError"] = $"Error ocorred: unable to delete your contact\n Details: {error.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
         public IActionResult Create(ContactsModel contact)
         {
-			_contactRepositorie.ToAdd(contact);
-            return RedirectToAction("Index");
+            try
+            {
+				if (ModelState.IsValid)
+				{
+					_contactRepositorie.ToAdd(contact);
+					TempData["SuccessMessage"] = "Contact created sucessfully";
+					return RedirectToAction("Index");
+				}
+				return View(contact);
+			}
+            catch (Exception error)
+            {
+                TempData["MessageError"] = $"An error ocurred!\n Details: {error.Message}";
+                return RedirectToAction("Index");
+			}
 		}
 
         [HttpPost]
@@ -57,7 +89,6 @@ namespace ContactsControl.Controllers
                 if (ModelState.IsValid)
                 {
                     this._contactRepositorie.Edit(contact);
-
                     TempData["SuccessMessage"] = "Contact edited successfully";
                     return RedirectToAction("Index");
                 }
@@ -65,7 +96,7 @@ namespace ContactsControl.Controllers
             }
             catch (Exception error)
             {
-                TempData["MensagemErro"] = $"An error occurred! Details: {error.Message}";
+                TempData["MessageError"] = $"An error occurred!\n Details: {error.Message}";
                 return RedirectToAction("Index");
             }
         }

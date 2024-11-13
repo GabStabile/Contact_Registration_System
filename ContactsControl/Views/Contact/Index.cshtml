@@ -10,11 +10,40 @@
 	</a>
 </div>
 
+<br/>
+
 <div class="text-center">
+
+	<!-- Verifica se existe uma mensagem de sucesso armazenada no TempData -->
+	@if (TempData["SuccessMessage"] != null)
+	{
+		<!-- Alerta de sucesso se a mensagem estiver presente -->
+		<div class="alert alert-success" role="alert">
+			<!-- Botão para fechar o alerta -->
+			<button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+			<!-- Exibe o conteúdo da mensagem de sucesso -->
+			@TempData["SuccessMessage"]
+		</div>
+	}
+
+	<!-- Verifica se existe uma mensagem de erro armazenada no TempData -->
+	@if(TempData["MessageError"] != null) 
+	{
+		<!-- Alerta de erro se a mensagem estiver presente -->
+		<div class="alert alert-danger" role="alert">
+			<!-- Botão para fechar o alerta -->
+			<button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+			<!-- Exibe o conteúdo da mensagem de erro -->
+			@TempData["MessageError"]
+		</div>
+	}
+
+	<br />
+
 	<h2 class="display-4">Contacts list</h2>
+
 	<!-- Create table for show on contact list -->
 	<table class="table">
-
 		<thead>
 			<tr>
 				<th scope="col">Id</th>
