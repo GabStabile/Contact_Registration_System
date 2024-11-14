@@ -9,3 +9,7 @@ $('.close-alert').click(function () {
     // Oculta todos os elementos com a classe 'alert' quando o botão de fechar é clicado
     $('.alert').hide('hide');
 })
+
+$(document).ready(function () {
+    $('#table-contacts').DataTable();
+});

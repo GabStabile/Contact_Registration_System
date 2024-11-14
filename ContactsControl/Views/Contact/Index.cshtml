@@ -43,13 +43,14 @@
 	<h2 class="display-4">Contacts list</h2>
 
 	<!-- Create table for show on contact list -->
-	<table class="table">
+	<table class="table" id="table-contacts">
 		<thead>
 			<tr>
 				<th scope="col">Id</th>
 				<th scope="col">Name</th>
 				<th scope="col">E-mail</th>
 				<th scope="col">Cellphone</th>
+				<th scope="col"></th>
 			</tr>
 		</thead>
 		<tbody class="table-group-divider">
@@ -61,7 +62,7 @@
 				{
 					<tr>
 						<!--Show contact ID in first column-->
-						<th scope="row">@contact.Id</th>
+						<td scope="row">@contact.Id</td>
 						<!--Show contact Name-->
 						<td>@contact.Name</td>
 						<!--Show contact Email-->
