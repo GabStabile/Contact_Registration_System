@@ -14,7 +14,6 @@ namespace ContactsControl.Controllers
 			_userRepositorie = userRepositorie;
 		}
 
-
 		// gets
 		public IActionResult Index()
 		{
@@ -30,8 +29,31 @@ namespace ContactsControl.Controllers
 			return View();
 		}
 
-		public IActionResult Delete() {
-			return View();
+		public IActionResult Delete(int id) {
+			try
+			{
+				bool deleteUser = _userRepositorie.Delete(id);
+				if (deleteUser)
+				{
+					TempData["SuccessMessage"] = "User deleted sucessfully";
+				}
+				else
+				{
+					TempData["ErrorMessage"] = "Unable to delete your user";
+				}
+				return RedirectToAction("Index");
+			}
+			catch (System.Exception error)
+			{
+				TempData["ErrorMessage"] = $"Error ocorred: unable your to delete your user\n Details: {error.Message}";
+				return RedirectToAction("Index");
+			}
+		}
+
+		public IActionResult DeleteConfirmation(int id)
+		{
+			UsersModel users = _userRepositorie.ListForId(id);
+			return View(users);
 		}
 
 		[HttpPost]

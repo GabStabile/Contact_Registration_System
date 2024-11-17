@@ -1188,3 +1188,4 @@ C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\ref\Contact
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\User\Create.cshtml.g.cs
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\User\Edit.cshtml.g.cs
+C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\User\DeleteConfirmation.cshtml.g.cs
