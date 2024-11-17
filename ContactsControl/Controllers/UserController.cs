@@ -1,6 +1,7 @@
 ﻿using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace ContactsControl.Controllers
@@ -25,8 +26,9 @@ namespace ContactsControl.Controllers
 			return View();
 		}
 
-		public IActionResult Edit() {
-			return View();
+		public IActionResult Edit(int id) {
+			UsersModel user = _userRepositorie.ListForId(id);
+			return View(user);
 		}
 
 		public IActionResult Delete(int id) {
@@ -56,6 +58,7 @@ namespace ContactsControl.Controllers
 			return View(users);
 		}
 
+		// method 'Create User'
 		[HttpPost]
 		public IActionResult Create(UsersModel user)
 		{
@@ -76,5 +79,37 @@ namespace ContactsControl.Controllers
 				return RedirectToAction("Idex");
 			}
 		}
-	}
+
+        // method 'Edit User'
+        [HttpPost]
+        public IActionResult Edit(UsersWithoutPasswordModel userWithoutPassword)
+        {
+            try
+            {
+                UsersModel user = null;
+
+                if (ModelState.IsValid)
+                {
+                    user = new UsersModel()
+					{
+						Id = userWithoutPassword.Id,
+						Name = userWithoutPassword.Name,
+						Email = userWithoutPassword.Email,
+						Login = userWithoutPassword.Login,
+						Profile = userWithoutPassword.Profile
+					};
+
+                    user = this._userRepositorie.Edit(user);
+                    TempData["SuccessMessage"] = "Contact edited successfully";
+                    return RedirectToAction("Index");
+                }
+                return View(user);
+            }
+            catch (Exception error)
+            {
+                TempData["MessageError"] = $"An error occurred!\n Details: {error.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+    }
 }
