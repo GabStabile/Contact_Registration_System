@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://cdn.datatables.net/v/dt/dt-2.1.8/datatables.min.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -29,10 +30,16 @@
                                 Home
                                 </a>
                         </li>
-                        
+                        <!-- Contacts -->
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">
                                 Contacts
+                            </a>
+                        </li>
+                        <!-- Users -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">
+                                Users
                             </a>
                         </li>
                     </ul>

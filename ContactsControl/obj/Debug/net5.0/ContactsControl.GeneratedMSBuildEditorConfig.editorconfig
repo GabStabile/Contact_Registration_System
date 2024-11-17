@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ContactsControl
-build_property.ProjectDir = C:\temp\ContactsControl\ContactsControl\
+build_property.ProjectDir = C:\temp\Contact_Registration_System\ContactsControl\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ilNAWvlWBpI=",
+  "dgSpecHash": "RJ8u3aSHqf8=",
   "success": true,
-  "projectFilePath": "C:\\temp\\ContactsControl\\ContactsControl\\ContactsControl.csproj",
+  "projectFilePath": "C:\\temp\\Contact_Registration_System\\ContactsControl\\ContactsControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",

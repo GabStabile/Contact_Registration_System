@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\temp\\ContactsControl\\",
+  "WorkspaceRootPath": "C:\\temp\\Contact_Registration_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contact_registration_system\\contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contact_registration_system\\contactscontrol\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contactscontrol\\contactscontrol\\views\\contact\\deleteconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\views\\contact\\deleteconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|c:\\temp\\contact_registration_system\\contactscontrol\\models\\contactsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F890465-DF64-40A0-BCB9-B7D5616A180A}|ContactsControl\\ContactsControl.csproj|solutionrelative:contactscontrol\\models\\contactsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "ContactsControl\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "ContactsControl\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-13T23:36:30.057Z",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ContactsControl\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ContactsControl\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA9wCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T18:43:32.519Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ContactsControl\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ContactsControl\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T23:32:19.914Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
+              "DocumentMoniker": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "ContactsControl\\Views\\Contact\\Index.cshtml",
-              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\Index.cshtml",
+              "ToolTip": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Views\\Contact\\Index.cshtml",
               "RelativeToolTip": "ContactsControl\\Views\\Contact\\Index.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwEcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T00:52:49.27Z",
+              "WhenOpened": "2024-11-16T21:56:56.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DeleteConfirmation.cshtml",
-              "DocumentMoniker": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\DeleteConfirmation.cshtml",
-              "RelativeDocumentMoniker": "ContactsControl\\Views\\Contact\\DeleteConfirmation.cshtml",
-              "ToolTip": "C:\\temp\\ContactsControl\\ContactsControl\\Views\\Contact\\DeleteConfirmation.cshtml",
-              "RelativeToolTip": "ContactsControl\\Views\\Contact\\DeleteConfirmation.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T22:35:49.716Z",
+              "DocumentIndex": 2,
+              "Title": "ContactsModel.cs",
+              "DocumentMoniker": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Models\\ContactsModel.cs",
+              "RelativeDocumentMoniker": "ContactsControl\\Models\\ContactsModel.cs",
+              "ToolTip": "C:\\temp\\Contact_Registration_System\\ContactsControl\\Models\\ContactsModel.cs",
+              "RelativeToolTip": "ContactsControl\\Models\\ContactsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T21:47:18.726Z",
               "EditorCaption": ""
             }
           ]

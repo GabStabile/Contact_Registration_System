@@ -13,3 +13,7 @@ $('.close-alert').click(function () {
 $(document).ready(function () {
     $('#table-contacts').DataTable();
 });
+
+$(document).ready(function () {
+    $('#table-users').DataTable();
+});

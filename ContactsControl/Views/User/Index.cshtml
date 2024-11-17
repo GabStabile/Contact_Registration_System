@@ -1,12 +1,12 @@
-﻿@model List<ContactsModel>
+﻿@model List<UsersModel>
 @{
 	<!-- Title of page -->
-	ViewData["Title"] = "Contacts list";
+	ViewData["Title"] = "Users list";
 }
 <!-- Button 'Add new contact' -->
 <div class="d-grid gap-1 d-md-flex justify-content-md-start">
-	<a class="btn btn-primary" role="button" asp-controller="Contact" asp-action="Create">
-		Add new contact
+	<a class="btn btn-primary" role="button" asp-controller="User" asp-action="Create">
+		Add new user
 	</a>
 </div>
 
@@ -38,43 +38,46 @@
 
 	<br />
 
-	<h2 class="display-4">Contacts list</h2>
+	<h2 class="display-4">Users list</h2>
 
 	<!-- Create table for show on contact list -->
-	<table class="table" id="table-contacts">
+	<table class="table text-center" id="table-users">
 		<thead>
 			<tr>
 				<th scope="col">Id</th>
 				<th scope="col">Name</th>
+				<th scope="col">Login</th>
 				<th scope="col">E-mail</th>
-				<th scope="col">Cellphone</th>
+				<th scope="col">Date of registration</th>
 				<th scope="col"></th>
 			</tr>
 		</thead>
-		<tbody class="table-group-divider">
+		<tbody class="table-group-divider text-center">
 			<!-- Checks if the model (contact list) is not null and contains elements -->
 			@if (Model != null && Model.Any())
 			{
 				<!--Itera sobre cada contato na lista de contatos (Model)-->
-				foreach (ContactsModel contact in Model)
+				foreach (var user in Model)
 				{
 					<tr>
 						<!--Show contact ID in first column-->
-						<td scope="row">@contact.Id</td>
+						<td scope="row">@user.Id</td>
 						<!--Show contact Name-->
-						<td>@contact.Name</td>
+						<td>@user.Name</td>
 						<!--Show contact Email-->
-						<td>@contact.Email</td>
+						<td>@user.Login</td>
 						<!--Show contact Phone-->
-						<td>@contact.Phone</td>
+						<td>@user.Email</td>
+						<td>@user.RegistrationDate.ToString("yyyy-MM-dd HH:mm")</td>
 						<td>
 							<div class="btn-group me-2" role="group">
 								<!--Button 'Edit'-->
-								<a class="btn btn-primary" asp-route-id="@contact.Id" asp-controller="Contact" asp-action="Edit">
+								<a class="btn btn-primary" asp-route-id="@user.Id" asp-controller="User" asp-action="Edit">
 									Edit
 								</a>
+								
 								<!--Button 'Delete'-->
-								<a class="btn btn-danger" asp-route-id="@contact.Id" asp-controller="Contact" asp-action="DeleteConfirmation">
+								<a class="btn btn-danger" asp-route-id="@user.Id" asp-controller="User" asp-action="DeleteConfirmation">
 									Delete
 								</a>
 							</div>
@@ -86,4 +89,3 @@
 	</table>
 	<br />
 </div>
-

@@ -1,4 +1,4 @@
-using ContactsControl.DB;
+using ContactsControl.Data;
 using ContactsControl.Repositorie;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ContactsControl
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -26,17 +26,17 @@ namespace ContactsControl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services
-                .AddEntityFrameworkSqlServer()
-                .AddDbContext<BContext>(
-                O =>
-                O.UseSqlServer(
-                    Configuration.GetConnectionString(
-                        "DataBase"
+
+				services.AddDbContext<BContext>(
+                    options => options.UseSqlServer(
+                        Configuration.GetConnectionString(
+                            "DataBase"
                         )
                     )
                 );
-            services.AddScoped<IContactRepositorie, ContactRepositorie>();
+                
+			services.AddScoped<IContactRepositorie, ContactRepositorie>();
+            services.AddScoped<IUserRepositorie, UserRepositorie>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
