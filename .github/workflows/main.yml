@@ -30,3 +30,10 @@ jobs:
       # Executa os testes com cobertura de código
       - name: Testing Running
         run: dotnet test --configuration Release
+      
+      # Envia relatórios de cobertura para o Codecov
+      - name: Upload Coverage Reports to CodeCov
+        uses: codecov/codecov-action@4.0.1
+        with: 
+          token: ${{ secrets.CODECOV_TOKEN }} # Token de autenticação do Codecov
+          slug: GabStabile/Contact_Registration_System # Repositório no Codecov
