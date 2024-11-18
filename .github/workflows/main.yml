@@ -1,0 +1,32 @@
+name: Github Actions Pipeline Lesson
+
+on:
+    push:
+    pull_request:     
+    
+jobs:
+  build: 
+    runs-on: ubuntu-latest # 
+
+    steps:
+      # Faz o checkout do código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Configura o .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 5
+
+      # Restaura as dependências do projeto
+      - name: Restore dependencies
+        run: dotnet restore
+      
+      # Compila o projeto
+      - name: Build solution
+        run: dotnet build --configuration Release
+      
+      # Executa os testes com cobertura de código
+      - name: Testing Running
+        run: dotnet test --configuration Release
