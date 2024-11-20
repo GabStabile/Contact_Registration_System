@@ -22,7 +22,7 @@ namespace ContactsControl.Repositorie
 		public ContactsModel ToAdd(ContactsModel contact)
 		{
 			// saved in DB
-			_context.Add(contact);
+			_context.DB_Contacts.Add(contact);
 			_context.SaveChanges();
 			return contact;
 		}
