@@ -396,3 +396,12 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Outros padrões existentes no seu .gitignore
+# Ignorar resultados de cobertura de testes
+TestResults/
+
+# Coverlet é uma ferramenta de cobertura de código gratuita e multiplataforma
+coverage*.json
+coverage*.xml
+coverage*.info

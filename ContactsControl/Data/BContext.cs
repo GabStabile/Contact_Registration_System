@@ -5,11 +5,16 @@ namespace ContactsControl.Data
 {
 	public class BContext : DbContext
 	{
-		// Connection on DB
-		public BContext(DbContextOptions<BContext> options) : base(options) { }
-		// Contacts
-		public DbSet<ContactsModel> DB_Contacts { get; set; }
-		// Users
-		public DbSet<UsersModel> DB_Users { get; set; }
+		// constructor for tests
+        public BContext() {}
+
+        // Connection on DB
+        public BContext(DbContextOptions<BContext> options) : base(options) { }
+
+        // Contacts
+        public virtual DbSet<ContactsModel> DB_Contacts { get; set; }
+
+        // Users
+        public virtual DbSet<UsersModel> DB_Users { get; set; }
 	}
 }

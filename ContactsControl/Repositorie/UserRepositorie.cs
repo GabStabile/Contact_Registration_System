@@ -23,7 +23,7 @@ namespace ContactsControl.Repositorie
 		{
 			user.RegistrationDate = DateTime.Now;
 			// saved in DB
-			_context.Add(user);
+			_context.DB_Users.Add(user);
 			_context.SaveChanges();
 			return user;
 		}
