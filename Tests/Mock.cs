@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ControlContacts.Tests
+namespace ContactsControl.Tests
 {
     internal class Mock<T>
     {

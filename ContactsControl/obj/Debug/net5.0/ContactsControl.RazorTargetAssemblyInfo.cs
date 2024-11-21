@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContactsControl")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f7a98e078de172dae0fea65ec9ade1f910948dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+087df8713736b004823e92cd0f111bd32999553f")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContactsControl.Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
