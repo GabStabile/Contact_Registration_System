@@ -1,14 +1,18 @@
-using ContactsControl.Data;
+Ôªøusing ContactsControl.Data;
 using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.EntityFrameworkCore;
 using Moq;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
-namespace ControlContacts.Tests
+namespace Tests.RepositoriesTests
 {
-    public class ContactRepositorieTests
+    public class ContactModelTests
     {
         [Fact(DisplayName = "Given valid contact, When ToAdd is called, Then contact should be added successfully")]
         public void ToAdd_ValidContact_AddsContact()
@@ -16,22 +20,22 @@ namespace ControlContacts.Tests
             // Arrange
             var mockDbSet = new Mock<DbSet<ContactsModel>>();
 
-            // Cria uma lista interna para simular a adiÁ„o de elementos no DbSet.
+            // Cria uma lista interna para simular a adi√ß√£o de elementos no DbSet.
             var contactList = new List<ContactsModel>();
 
-            // Configura o mockDbSet para adicionar ‡ lista interna quando Add for chamado
+            // Configura o mockDbSet para adicionar √† lista interna quando Add for chamado
             mockDbSet.Setup(m => m.Add(It.IsAny<ContactsModel>())).Callback<ContactsModel>((contact) => contactList.Add(contact));
 
-            // Cria um mock para o context do DB (BContext), simulando conex„o com banco
+            // Cria um mock para o context do DB (BContext), simulando conex√£o com banco
             var mockContext = new Mock<BContext>();
 
             // Configura o mock do DbSet para quando o contexto for acessado, retorne o mockDbSet
             mockContext.Setup(c => c.DB_Contacts).Returns(mockDbSet.Object);
 
-            // Instancia o repositÛrio ContactRepositorie usando o contexto do mock
+            // Instancia o reposit√≥rio ContactRepositorie usando o contexto do mock
             var repository = new ContactRepositorie(mockContext.Object);
 
-            // Contact model v·lido
+            // Contact model v√°lido
             var validContact = new ContactsModel
             {
                 Name = "Valid Name",
@@ -40,19 +44,19 @@ namespace ControlContacts.Tests
             };
 
             // Act
-            var result = repository.ToAdd(validContact); // Executa o mÈtodo ToAdd para adicionar o contato
+            var result = repository.ToAdd(validContact); // Executa o m√©todo ToAdd para adicionar o contato
 
             // Assert
-            Assert.NotNull(result); // Verifica se o resultado n„o È nulo (se o contato foi adicionado corretamente)
-            Assert.Equal(validContact.Name, result.Name); // Verifica se o nome do contato no resultado È igual ao nome do contato passado
+            Assert.NotNull(result); // Verifica se o resultado n√£o √© nulo (se o contato foi adicionado corretamente)
+            Assert.Equal(validContact.Name, result.Name); // Verifica se o nome do contato no resultado √© igual ao nome do contato passado
 
-            // Verifica se o mÈtodo Add foi chamado uma vez no DbSet
+            // Verifica se o m√©todo Add foi chamado uma vez no DbSet
             mockDbSet.Verify(m => m.Add(It.IsAny<ContactsModel>()), Times.Once);
 
-            // Verifica se o mÈtodo SaveChanges foi chamado uma vez no contexto
+            // Verifica se o m√©todo SaveChanges foi chamado uma vez no contexto
             mockContext.Verify(m => m.SaveChanges(), Times.Once);
 
-            // Verifica se a lista interna do DbSet agora contÈm o contato adicionado
+            // Verifica se a lista interna do DbSet agora cont√©m o contato adicionado
             Assert.Contains(contactList, c => c.Name == validContact.Name && c.Email == validContact.Email);
         }
     }

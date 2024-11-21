@@ -5,16 +5,16 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsControl", "ContactsControl\ContactsControl.csproj", "{6F890465-DF64-40A0-BCB9-B7D5616A180A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FD42BD13-3C63-41F0-B082-8BA0AFAB4FCC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoriesTests", "RepositoriesTests\RepositoriesTests.csproj", "{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BCA1BADB-5A17-4ABD-AD00-5C1EB00A978C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codecov", "codecov", "{FC8E07B7-2A2B-467E-B11B-E8B2A6D533E4}"
 	ProjectSection(SolutionItems) = preProject
 		codecov.yml = codecov.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B005774E-3393-4AC6-8A25-C76D8B470018}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,17 +26,17 @@ Global
 		{6F890465-DF64-40A0-BCB9-B7D5616A180A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F890465-DF64-40A0-BCB9-B7D5616A180A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F890465-DF64-40A0-BCB9-B7D5616A180A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6F890465-DF64-40A0-BCB9-B7D5616A180A} = {BCA1BADB-5A17-4ABD-AD00-5C1EB00A978C}
-		{2EC4AECD-63EA-4E8B-A662-2AEE052E1B01} = {FD42BD13-3C63-41F0-B082-8BA0AFAB4FCC}
+		{A7FEDA46-F7CA-4F50-877B-81D05B2A81CF} = {B005774E-3393-4AC6-8A25-C76D8B470018}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C52BDE7D-BFFD-42D7-A7BD-57DBB119FC33}

@@ -3,16 +3,12 @@ using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace RepositoriesTests
+namespace Tests.RepositoriesTests
 {
-    public  class UserRepositorieTests
+    public class UserModelTests
     {
         [Fact(DisplayName = "Given valid user, When ToAdd is called, Then user should be added successfully")]
         public void ToAdd_ValidUser_AddsUser()
