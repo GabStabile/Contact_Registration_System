@@ -14,8 +14,8 @@ namespace ContactsControl.Repositorie
 
         public object TempData => throw new System.NotImplementedException();
 
-        public UserRepositorie(BContext bContext) 
-		{
+        public UserRepositorie(BContext bContext)
+        {
 			_context = bContext;
 		}
 		// method: add user on table
@@ -56,7 +56,15 @@ namespace ContactsControl.Repositorie
 			return DBUser;
         }
 
-		public bool Delete(int id)
+        // buscar login no DB => comparar entrada do 'login' com 'login' no DB, comparando com caracters minusculos (p/ anular 'case sensitive')
+        public UsersModel SearchLogin(string login)
+        {
+            return _context.DB_Users
+                           .FirstOrDefault(x => x.Login.ToLower() == login.ToLower());
+        }
+
+
+        public bool Delete(int id)
 		{
 			UsersModel DBUser = this.ListForId(id);
 
@@ -74,5 +82,5 @@ namespace ContactsControl.Repositorie
 				throw new Exception("Error while deleting the user: " + ex.Message);
 			}
 		}
-	}
+    }
 }

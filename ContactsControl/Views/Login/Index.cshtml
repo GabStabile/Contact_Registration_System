@@ -1,0 +1,43 @@
+﻿@model LoginModel
+@{
+    <!-- Import Layout -->
+	Layout = "_LayoutLoggedOut";
+	ViewData["Title"] = "Login";
+}
+
+@if (TempData["MessageError"] != null)
+{
+    <!-- Alerta de erro se a mensagem estiver presente -->
+    <div class="alert alert-danger" role="alert">
+        <!-- Botão para fechar o alerta -->
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        <!-- Exibe o conteúdo da mensagem de erro -->
+        @TempData["MessageError"]
+    </div>
+}
+
+<!-- Form for login in system -->
+<form asp-controller="Login" asp-action="InSystem" method="post">
+    <!-- Enter Login -->
+    <div class="mb-3">
+        <!-- Campo de entrada "Login". O atributo "for" associa o label ao input com o id "login" -->
+        <label for="exampleInputEmailAddress" class="form-label">Login</label>
+        
+<!-- Campo de texto onde o usuario insere o login -->
+        <input type="text" asp-for=Login class="form-control" id="login" placeholder="Enter your login">
+        @Html.ValidationMessageFor(x => x.Login)
+    </div>
+
+    <!-- Enter Password -->
+    <div class="mb-3">
+        <!-- Campo de entrada "Password" -->
+        <label for="password" class="form-label">Password</label>
+        <input type="password" asp-for=Password class="form-control" id="password" placeholder="Enter your password">
+        
+        <!-- Message validation -->
+        @Html.ValidationMessageFor(x => x.Password)
+    </div>
+
+    <!-- Botão de submissão do formulário -->
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>

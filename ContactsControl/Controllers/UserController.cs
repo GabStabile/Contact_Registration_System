@@ -100,7 +100,7 @@ namespace ContactsControl.Controllers
 					};
 
                     user = this._userRepositorie.Edit(user);
-                    TempData["SuccessMessage"] = "Contact edited successfully";
+                    TempData["SuccessMessage"] = "User edited successfully";
                     return RedirectToAction("Index");
                 }
                 return View(user);
