@@ -5,6 +5,7 @@ namespace ContactsControl.Repositorie
 {
 	public interface IUserRepositorie
 	{
+		UsersModel SearchLogin(string login);
         object TempData { get; }
         UsersModel ListForId(int id);
 		List<UsersModel> AllSearch();

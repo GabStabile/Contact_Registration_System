@@ -139,7 +139,9 @@ namespace Tests.ControllersTests
         {
             // Arrange
             var user = new UsersWithoutPasswordModel { Id = 1, Name = "User1", Email = "user1@example.com" };
+            
             var updatedUser = new UsersModel { Id = 1, Name = "Updated User", Email = "updated@example.com" };
+            
             _mockUserRepositorie.Setup(repo => repo.Edit(It.IsAny<UsersModel>())).Returns(updatedUser);
 
             // Criando o mock do TempData
@@ -151,10 +153,11 @@ namespace Tests.ControllersTests
 
             // Assert
             var redirectResult = Assert.IsType<RedirectToActionResult>(result); // Verifica se redireciona para a ação Index
+            
             Assert.Equal("Index", redirectResult.ActionName); // Verifica se o redirecionamento é para a página Index
 
             // Verifica se o TempData contém a mensagem de sucesso
-            tempData.VerifySet(td => td["SuccessMessage"] = "Contact edited successfully", Times.Once());
+            tempData.VerifySet(td => td["SuccessMessage"] = "User edited successfully", Times.Once());
         }
     }
 }
