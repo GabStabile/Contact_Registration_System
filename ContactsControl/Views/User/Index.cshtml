@@ -1,4 +1,5 @@
-﻿@model List<UsersModel>
+﻿@using ContactsControl.Enums;
+@model List<UsersModel>
 @{
 	<!-- Title of page -->
 	ViewData["Title"] = "Users List";
@@ -40,43 +41,57 @@
 
 	<h2 class="display-4">Users list</h2>
 
-	<!-- Create table for show on contact list -->
+	<!-- Create table for show on User list -->
 	<table class="table text-center" id="table-users">
 		<thead>
 			<tr>
 				<th scope="col">Id</th>
 				<th scope="col">Name</th>
 				<th scope="col">Login</th>
-				<th scope="col">E-mail</th>
+				<th scope="col">E-mail address</th>
+				<th scope="col">Select profile</th>
 				<th scope="col">Date of registration</th>
 				<th scope="col"></th>
 			</tr>
 		</thead>
+
 		<tbody class="table-group-divider text-center">
-			<!-- Checks if the model (contact list) is not null and contains elements -->
+			<!-- Checks if the model (users list) is not null and contains elements -->
 			@if (Model != null && Model.Any())
 			{
-				<!--Itera sobre cada contato na lista de contatos (Model)-->
+				<!-- Itera sobre cada User na lista de Users (Model) -->
 				foreach (var user in Model)
 				{
 					<tr>
-						<!--Show contact ID in first column-->
+						<!--Show User ID in first column-->
 						<td scope="row">@user.Id</td>
-						<!--Show contact Name-->
+
+						<!--Show User Name-->
 						<td>@user.Name</td>
-						<!--Show contact Email-->
+
+						<!--Show User Email-->
 						<td>@user.Login</td>
-						<!--Show contact Phone-->
+
+						<!--Show User Phone-->
 						<td>@user.Email</td>
-						<td>@user.RegistrationDate.ToString("yyyy-MM-dd HH:mm")</td>
+
+						<!--Show User Phone-->
+						<td>
+							@(user.Profile == ContactsControl.Enums.EnumProfile.Admin ? "Admin" : "Default")
+						</td>
+
+						<!--Show User registration data-->
+						<td>@user.RegistrationDate.ToString("yyyy-MM-dd HH:mm")
+						</td>
+
 						<td>
 							<div class="btn-group me-2" role="group">
-								<!--Button 'Edit'-->
+								<!-- Button 'Edit' -->
 								<a class="btn btn-primary" asp-route-id="@user.Id" asp-controller="User" asp-action="Edit">
 									Edit
 								</a>
 								
-								<!--Button 'Delete'-->
+								<!-- Button 'Delete' -->
 								<a class="btn btn-danger" asp-route-id="@user.Id" asp-controller="User" asp-action="DeleteConfirmation">
 									Delete
 								</a>
