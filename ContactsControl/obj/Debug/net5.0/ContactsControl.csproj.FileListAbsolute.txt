@@ -1191,3 +1191,4 @@ C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\User\DeleteConfirmation.cshtml.g.cs
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\Shared\_LayoutLoggedOut.cshtml.g.cs
 C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+C:\temp\Contact_Registration_System\ContactsControl\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs

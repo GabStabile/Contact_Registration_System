@@ -1,4 +1,4 @@
-﻿using ContactsControl.Data;
+﻿using ContactsControl.Helper;
 using ContactsControl.Models;
 using ContactsControl.Repositorie;
 using Microsoft.AspNetCore.Mvc;
@@ -9,18 +9,31 @@ namespace ContactsControl.Controllers
 	public class LoginController : Controller
 	{
 		private readonly IUserRepositorie _userRepositorie;
+        private readonly ISession _session;
 
-        public LoginController(IUserRepositorie userRepositorie)
+        public LoginController(IUserRepositorie userRepositorie, ISession session)
         {
-            _userRepositorie = userRepositorie ?? throw new ArgumentNullException(nameof(userRepositorie));
+            _userRepositorie = userRepositorie;
+            
+            _session = session;
         }
 
         public IActionResult Index()
 		{
-			return View();
+            // se o usuario estiver logado, redirecionar para a home. Significa que tem usuario com sessao aberta
+            if (_session.SearchUserSession() != null) return RedirectToAction("Index", "Home");
+
+            return View();
 		}
 
-		[HttpPost]
+        public IActionResult Logout(UsersModel user)
+        {
+            _session.RemoveUserSession(user);
+
+            return RedirectToAction("Index", "Login");
+        }
+
+        [HttpPost]
 		public IActionResult InSystem(LoginModel loginModel)
 		{
 			try
@@ -35,8 +48,11 @@ namespace ContactsControl.Controllers
                         // condition for valid password
                         if (user.ValidPassword(loginModel.Password))
                         {
+                            // method for create session
+                            _session.CreateUserSession(user);
                             return RedirectToAction("Index", "Home");
                         }
+
                         TempData["MessageError"] = "Incorrect user password. Please try again";
                     }
                     else
@@ -52,5 +68,5 @@ namespace ContactsControl.Controllers
 				return View("Index");
 			}
 		}
-	}
+    }
 }
