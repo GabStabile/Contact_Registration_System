@@ -1,0 +1,40 @@
+﻿@model UsersModel
+
+<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+    Hello, @Model.Name
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+    </span>
+</button>
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                Home
+            </a>
+        </li>
+        <!-- Contacts -->
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">
+                Contacts
+            </a>
+        </li>
+        <!-- Users -->
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">
+                Users
+            </a>
+    </ul>
+    <!-- Botão de Logout -->
+    <div class="d-flex justify-content-end align-items-center">
+        <button class="btn btn-secondary">
+            <a class="text-white personalized-logout" asp-area="" asp-controller="Login" asp-action="Logout">
+                Logout
+            </a>
+        </button>
+    </div>
+</div>
